@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #1F293D;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
+
+/* Code fonts */
+pre, code, .font-mono {
+  font-family: 'Fira Code', 'JetBrains Mono', Consolas, Monaco, monospace;
+}
+
+/* Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(118, 185, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(118, 185, 0, 0.5);
+  }
+}
+
+.glow-nvidia {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+/* Markdown prose overrides */
+.prose-codex {
+  color: #E5E7EB;
+  line-height: 1.7;
+}
+.prose-codex p {
+  margin-bottom: 0.85rem;
+}
+.prose-codex h1, .prose-codex h2, .prose-codex h3, .prose-codex h4 {
+  color: #F9FAFB;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.6rem;
+}
+.prose-codex h1 { font-size: 1.5rem; }
+.prose-codex h2 { font-size: 1.25rem; }
+.prose-codex h3 { font-size: 1.1rem; }
+.prose-codex ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-bottom: 0.85rem;
+}
+.prose-codex ol {
+  list-style-type: decimal;
+  margin-left: 1.5rem;
+  margin-bottom: 0.85rem;
+}
+.prose-codex li {
+  margin-bottom: 0.25rem;
+}
+.prose-codex code:not(pre code) {
+  background-color: rgba(31, 41, 61, 0.8);
+  color: #76B900;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.35rem;
+  font-size: 0.88em;
+  border: 1px solid rgba(118, 185, 0, 0.2);
+}
+.prose-codex blockquote {
+  border-left: 3px solid #76B900;
+  padding-left: 1rem;
+  color: #9CA3AF;
+  font-style: italic;
+  margin: 1rem 0;
+}
+.prose-codex table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+.prose-codex th, .prose-codex td {
+  border: 1px solid #1F293D;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+.prose-codex th {
+  background-color: #161F30;
+  color: #76B900;
+  font-weight: 600;
+}
